@@ -271,7 +271,6 @@ public:
 		}
 		header_->right->color = BLACK;		
 
-std::cout << cur->parent->element.first << std::endl;
 		if(cur == cur->parent->left)
 			cur->parent->left = nullnode_;
 		else
@@ -305,9 +304,9 @@ std::cout << cur->parent->element.first << std::endl;
 			}
 		}
 
-	void PrintInorder_Iteratorly(){
+	void PrintInorder_R(){
 		if(header_->right != nullnode_)
-			PrintInorder_Iteratorly(header_->right);
+			PrintInorder_R(header_->right);
 	}
 
 private:
@@ -430,9 +429,9 @@ private:
 		}
 	}
 
-	void PrintInorder_Iteratorly(node* proot){
+	void PrintInorder_R(node* proot){
 		if(proot != nullnode_){
-			PrintInorder_Iteratorly(proot->left);
+			PrintInorder_R(proot->left);
 
 			std::cout << proot->element.first;
 			if(proot->color == RED)
@@ -442,7 +441,7 @@ private:
 					 
 			printf("\t");
 
-			PrintInorder_Iteratorly(proot->right);
+			PrintInorder_R(proot->right);
 		}
 	}
 };

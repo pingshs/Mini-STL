@@ -80,6 +80,7 @@ public:
 			return old;
 		}
 
+//TODO
 /*		iterator operator--(){
 			
 			if(cur_ == table_[index_].begin() || 
@@ -103,11 +104,6 @@ public:
 			return old;
 		}
 
-/*		iterator operator++();
-		iterator operator++(int);
-
-		iterator operator--();
-			
 		iterator operator--(int);
 */
 
@@ -204,6 +200,8 @@ private:
 }
 
 namespace MiniSTL{
+
+//
 /*
 template<typename KeyType>
 typename unordered_set<KeyType>::iterator unordered_set<KeyType>::iterator::operator++(){
